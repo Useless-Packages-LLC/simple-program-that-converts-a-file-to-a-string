@@ -154,14 +154,14 @@ int main() {
 	char szbuf[BUF_SIZE + 4];
 	size_t szlen;
 	if (file_size > 0x9248e25e6c) { // ~585 GiB
-		if ((szlen = snprintf(szbuf, 21, "%x", file_size)) < 0) {
+		if ((szlen = snprintf(szbuf, 21, "%zx", file_size)) < 0) {
 			perror("sprintf");
 			return 1;
 		} if (write(1, "0x", 2) < 0) {
 			perror("write");
 			return 1;
 		}
-	} else if ((szlen = snprintf(szbuf, 21, "%d", file_size)) < 0) {
+	} else if ((szlen = snprintf(szbuf, 21, "%zd", file_size)) < 0) {
 		perror("sprintf");
 		return 1;
 	}
