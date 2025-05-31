@@ -2,7 +2,6 @@
 
 That's basically it...
 
-**NEW!** Now adds the null terminator and length at the end
 **NEW!** You now need to include \<embed.h>
 
 # Build instructions
